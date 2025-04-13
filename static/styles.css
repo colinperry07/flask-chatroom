@@ -1,0 +1,116 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #222;
+    --primary: #4caf50;
+    --bubble-bg: #e0f2f1;
+    --user-color: #2e7d32;
+    --input-bg: #fff;
+    --border: #ccc;
+    --shadow: rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0 1rem;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#messages li {
+    background-color: var(--bubble-bg);
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px var(--shadow);
+    word-wrap: break-word;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+#messages li.self {
+    background-color: #c8e6c9;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+#msg {
+    padding: 10px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 400px;
+    margin: 10px 5px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--input-bg);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px var(--shadow);
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+form input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+}
